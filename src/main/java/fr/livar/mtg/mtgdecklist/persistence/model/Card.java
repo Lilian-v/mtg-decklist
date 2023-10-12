@@ -33,6 +33,10 @@ public class Card {
 		this.flavorText = flavorText;
 	}
 	
+	public void setOracleCardId(UniqueCard oracleCardId) {
+		this.oracleCardId = oracleCardId;
+	}
+	
 	public String getCardId() {
 		return cardId;
 	}

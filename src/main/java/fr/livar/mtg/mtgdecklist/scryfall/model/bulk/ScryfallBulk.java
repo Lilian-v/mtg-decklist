@@ -27,7 +27,7 @@ import jakarta.annotation.Generated;
     "content_encoding"
 })
 @Generated("jsonschema2pojo")
-public class Datum {
+public class ScryfallBulk {
 
     @JsonProperty("object")
     public String object;

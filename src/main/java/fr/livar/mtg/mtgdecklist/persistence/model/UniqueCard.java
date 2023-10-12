@@ -15,7 +15,7 @@ public class UniqueCard {
 	private String typeLine;
 	private String oracleText;
 	private String manaCost;
-	private String convertedManaCost;
+	private Float convertedManaCost;
 	private List<String> colors;
 	private List<String> colorIdentity;
 	private List<String> keywords;
@@ -27,9 +27,8 @@ public class UniqueCard {
 	private List<String> producedManaColors;
 	private String planeswalkerLoyalty;
 	
-	public UniqueCard() {}
 	public UniqueCard(String oracleCardId, String name, String layout, String typeLine, String oracleText, String manaCost,
-			String convertedManaCost, List<String> colors, List<String> colorIdentity, List<String> keywords, String commanderLegality,
+			Float convertedManaCost, List<String> colors, List<String> colorIdentity, List<String> keywords, String commanderLegality,
 			String creaturePower, String creatureToughness, String battleDefense, List<String> producedManaColors, String planeswalkerLoyalty) {
 		this.oracleCardId = oracleCardId;
 		this.name = name;
@@ -67,7 +66,7 @@ public class UniqueCard {
 	public String getManaCost() {
 		return manaCost;
 	}
-	public String getConvertedManaCost() {
+	public Float getConvertedManaCost() {
 		return convertedManaCost;
 	}
 	public List<String> getColors() {

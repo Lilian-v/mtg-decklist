@@ -1,7 +1,8 @@
 
-package fr.livar.mtg.mtgdecklist.scryfall.model.card;
+package fr.livar.mtg.mtgdecklist.scryfall.model.bulk;
 
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
@@ -14,28 +15,19 @@ import jakarta.annotation.Generated;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "usd",
-    "usd_foil",
-    "usd_etched",
-    "eur",
-    "eur_foil",
-    "tix"
+    "object",
+    "has_more",
+    "data"
 })
 @Generated("jsonschema2pojo")
-public class Prices {
+public class ScryfallBulksWrapper {
 
-    @JsonProperty("usd")
-    public Object usd;
-    @JsonProperty("usd_foil")
-    public Object usdFoil;
-    @JsonProperty("usd_etched")
-    public Object usdEtched;
-    @JsonProperty("eur")
-    public Object eur;
-    @JsonProperty("eur_foil")
-    public Object eurFoil;
-    @JsonProperty("tix")
-    public String tix;
+    @JsonProperty("object")
+    public String object;
+    @JsonProperty("has_more")
+    public Boolean hasMore;
+    @JsonProperty("data")
+    public List<ScryfallBulk> data;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new LinkedHashMap<String, Object>();
 
