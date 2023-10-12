@@ -3,16 +3,17 @@ package fr.livar.mtg.mtgdecklist.persistence.model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "deck")
 public class Deck {
 	@Id @GeneratedValue private int deckId;
-	private int userId;
+	@ManyToOne private User userId;
 	private String deckName;
 	
-	public Deck(int userId, String deckName) {
+	public Deck(User userId, String deckName) {
 		this.userId = userId;
 		this.deckName = deckName;
 	}
@@ -21,7 +22,7 @@ public class Deck {
 		return deckId;
 	}
 
-	public int getUserId() {
+	public User getUserId() {
 		return userId;
 	}
 

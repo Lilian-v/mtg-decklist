@@ -3,29 +3,30 @@ package fr.livar.mtg.mtgdecklist.persistence.model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.IdClass;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
 @IdClass(CardDeckAssoc.class) 
 @Table(name = "card_deck_assoc")
 public class CardDeckAssoc {
-	@Id private int deckId;
-	@Id private int cardId;
+	@Id @ManyToOne private Deck deckId;
+	@Id @ManyToOne private Card cardId;
 	private int number;
 	private boolean isCommander;
 	
-	public CardDeckAssoc(int deckId, int cardId, int number, boolean isCommander) {
+	public CardDeckAssoc(Deck deckId, Card cardId, int number, boolean isCommander) {
 		this.deckId = deckId;
 		this.cardId = cardId;
 		this.number = number;
 		this.isCommander = isCommander;
 	}
 
-	public int getDeckId() {
+	public Deck getDeckId() {
 		return deckId;
 	}
 
-	public int getCardId() {
+	public Card getCardId() {
 		return cardId;
 	}
 	
