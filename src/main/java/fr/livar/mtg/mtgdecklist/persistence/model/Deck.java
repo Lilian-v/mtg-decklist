@@ -13,6 +13,7 @@ public class Deck {
 	@ManyToOne private User userId;
 	private String deckName;
 	
+	public Deck() {}
 	public Deck(User userId, String deckName) {
 		this.userId = userId;
 		this.deckName = deckName;

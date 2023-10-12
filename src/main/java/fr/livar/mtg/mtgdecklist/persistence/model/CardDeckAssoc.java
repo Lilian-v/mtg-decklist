@@ -15,6 +15,7 @@ public class CardDeckAssoc {
 	private int number;
 	private boolean isCommander;
 	
+	public CardDeckAssoc() {}
 	public CardDeckAssoc(Deck deckId, Card cardId, int number, boolean isCommander) {
 		this.deckId = deckId;
 		this.cardId = cardId;

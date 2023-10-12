@@ -11,7 +11,7 @@ public class Symbol {
 	private String svgUrl;
 	private String englishText;
 	
-	
+	public Symbol() {}
 	public Symbol(String symbol, String svgUrl, String englishText) {
 		super();
 		this.symbol = symbol;

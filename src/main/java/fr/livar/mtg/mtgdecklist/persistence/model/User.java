@@ -13,6 +13,7 @@ public class User {
 	private String userPassword;
 	private String defaultLangage;
 	
+	public User() {}
 	public User(int userId, String userName, String userPassword, String defaultLangage) {
 		this.userId = userId;
 		this.userName = userName;

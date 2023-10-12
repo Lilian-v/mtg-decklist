@@ -19,6 +19,7 @@ public class Card {
 	private String flavorName;
 	private String flavorText;
 	
+	public Card() {}
 	public Card(String cardId, UniqueCard oracleCardId, String langCode, String imageNormalSizeUrl, String printedName,
 			String printedText, String printedTypeLine, String flavorName, String flavorText) {
 		this.cardId = cardId;

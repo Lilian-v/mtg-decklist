@@ -27,6 +27,7 @@ public class UniqueCard {
 	private List<String> producedManaColors;
 	private String planeswalkerLoyalty;
 	
+	public UniqueCard() {}
 	public UniqueCard(String oracleCardId, String name, String layout, String typeLine, String oracleText, String manaCost,
 			String convertedManaCost, List<String> colors, List<String> colorIdentity, List<String> keywords, String commanderLegality,
 			String creaturePower, String creatureToughness, String battleDefense, List<String> producedManaColors, String planeswalkerLoyalty) {
