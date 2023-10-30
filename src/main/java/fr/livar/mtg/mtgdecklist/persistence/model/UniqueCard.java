@@ -2,6 +2,7 @@ package fr.livar.mtg.mtgdecklist.persistence.model;
 
 import java.util.List;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -13,6 +14,7 @@ public class UniqueCard {
 	private String name;
 	private String layout;
 	private String typeLine;
+	@Column(length = 2048)
 	private String oracleText;
 	private String manaCost;
 	private Float convertedManaCost;
@@ -27,6 +29,7 @@ public class UniqueCard {
 	private List<String> producedManaColors;
 	private String planeswalkerLoyalty;
 	
+	public UniqueCard() {}
 	public UniqueCard(String oracleCardId, String name, String layout, String typeLine, String oracleText, String manaCost,
 			Float convertedManaCost, List<String> colors, List<String> colorIdentity, List<String> keywords, String commanderLegality,
 			String creaturePower, String creatureToughness, String battleDefense, List<String> producedManaColors, String planeswalkerLoyalty) {

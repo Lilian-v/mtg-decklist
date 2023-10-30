@@ -14,4 +14,7 @@ mtg-decklist:
   scryfall:
     api:
       url: https://api.scryfall.com/
+      card:
+        relatedCards:
+          relationTypesToExclude: combo_piece
 

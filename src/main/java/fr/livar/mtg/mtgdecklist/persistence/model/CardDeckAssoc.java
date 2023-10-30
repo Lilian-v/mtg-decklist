@@ -1,5 +1,7 @@
 package fr.livar.mtg.mtgdecklist.persistence.model;
 
+import java.util.Objects;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.IdClass;
@@ -46,5 +48,21 @@ public class CardDeckAssoc {
 	public void setCommander(boolean isCommander) {
 		this.isCommander = isCommander;
 	}
-
+	
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(cardId, deckId);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		CardDeckAssoc other = (CardDeckAssoc) obj;
+		return Objects.equals(cardId, other.cardId) && Objects.equals(deckId, other.deckId);
+	}
 }

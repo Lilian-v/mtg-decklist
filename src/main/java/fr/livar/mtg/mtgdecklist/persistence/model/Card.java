@@ -1,5 +1,6 @@
 package fr.livar.mtg.mtgdecklist.persistence.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
@@ -14,12 +15,17 @@ public class Card {
 	private String imageNormalSizeUrl;
 	
 	private String printedName;
+	@Column(length = 2048)
 	private String printedText;
 	private String printedTypeLine;
 	private String flavorName;
+	@Column(length = 2048)
 	private String flavorText;
 	
 	public Card() {}
+	public Card(String cardId) {
+		this.cardId = cardId;
+	}
 	public Card(String cardId, UniqueCard oracleCardId, String langCode, String imageNormalSizeUrl, String printedName,
 			String printedText, String printedTypeLine, String flavorName, String flavorText) {
 		this.cardId = cardId;
