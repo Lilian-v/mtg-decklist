@@ -18,7 +18,7 @@ public class CardController {
 	}
 	
 	@GetMapping("/card/{cardId}")
-	Card getById(@PathVariable String cardId) {
+	public Card getById(@PathVariable String cardId) {
 		return cardRepository.findById(cardId).orElseThrow(() -> 
 				new ResponseStatusException(HttpStatus.NOT_FOUND, "Card not found, id : " + cardId));
 	}

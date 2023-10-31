@@ -12,13 +12,14 @@ public class User {
 	private String userName;
 	private String userPassword;
 	private String defaultLangage;
+	private String userRole;
 	
 	public User() {}
-	public User(int userId, String userName, String userPassword, String defaultLangage) {
-		this.userId = userId;
+	public User(String userName, String userPassword, String defaultLangage) {
 		this.userName = userName;
 		this.userPassword = userPassword;
 		this.defaultLangage = defaultLangage;
+		this.userRole = "USER";
 	}
 
 	public int getUserId() {
@@ -47,6 +48,13 @@ public class User {
 	
 	public void setDefaultLangage(String defaultLangage) {
 		this.defaultLangage = defaultLangage;
+	}
+	
+	public String getUserRole() {
+		return userRole;
+	}
+	public void setUserRole(String userRole) {
+		this.userRole = userRole;
 	}
 
 }
